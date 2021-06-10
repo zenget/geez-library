@@ -38,6 +38,9 @@ urlpatterns = [
 
     path("api/",
          include("users.api.urls")),
+    
+    path("api/",
+         include("books.api.urls")),
 
     path("api-auth/",
         include("rest_framework.urls")),

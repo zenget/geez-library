@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     
     'books',
-    'rent_history',
     'users',   
    
 ]
@@ -143,6 +142,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Custom User Model
 AUTH_USER_MODEL = "users.CustomUser"
 
+
+# django.contrib.sites
+SITE_ID = 1
+
 # django-allauth
 ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_EMAIL_REQUIRED = (True)
@@ -159,6 +162,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 5
+    'PAGE_SIZE': 5,
 }
 
